@@ -1,4 +1,16 @@
-## Welcome to GitHub Pages
+<center>
+
+# Video Semantic Segmentation with <br> Distortion-Aware Feature Correction
+
+[Jiafan Zhuang](https://scholar.google.com/citations?user=KbWzCu4AAAAJ&hl=zh-CN) &nbsp;&nbsp;&nbsp;&nbsp;
+[Zilei Wang](https://scholar.google.com/citations?hl=zh-CN&user=tMO7jm4AAAAJ) &nbsp;&nbsp;&nbsp;&nbsp;
+[Bingke Wang]()
+
+VIM Lab, University of Science and Technology of China
+
+</center>
+
+
 
 You can use the [editor on GitHub](https://github.com/jfzhuang/DAVSS.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
