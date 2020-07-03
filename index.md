@@ -16,25 +16,25 @@ Video semantic segmentation targets to generate accurate semantic map for each f
 
 ## Framework
 
-![avatar](F:\git\DAVSS.github.io\image\framework.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/framework.png" width="860"/>
 
 ## Visualization
 
 ### Cityscapes
 
-![avatar](F:\git\DAVSS.github.io\image\cityscapes_56.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png" width="860"/>
 
-![avatar](F:\git\DAVSS.github.io\image\cityscapes_85.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png" width="860"/>
 
-![avatar](F:\git\DAVSS.github.io\image\cityscapes_99.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png" width="860"/>
 
 ### CamVid
 
-![avatar](F:\git\DAVSS.github.io\image\cityscapes_56.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png" width="860"/>
 
-![avatar](F:\git\DAVSS.github.io\image\cityscapes_85.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png" width="860"/>
 
-![avatar](F:\git\DAVSS.github.io\image\cityscapes_99.png)
+<img src="https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png" width="860"/>
 
 ## Materials
 
