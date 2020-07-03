@@ -2,48 +2,48 @@
 
 # Video Semantic Segmentation with <br> Distortion-Aware Feature Correction
 
-[Jiafan Zhuang](https://scholar.google.com/citations?user=KbWzCu4AAAAJ&hl=zh-CN) &nbsp;&nbsp;&nbsp;&nbsp;
-[Zilei Wang](https://scholar.google.com/citations?hl=zh-CN&user=tMO7jm4AAAAJ) &nbsp;&nbsp;&nbsp;&nbsp;
-[Bingke Wang]()
+[Jiafan Zhuang](https://scholar.google.com/citations?user=KbWzCu4AAAAJ&hl=zh-CN) &nbsp;&nbsp;&nbsp;&nbsp;[Zilei Wang](https://scholar.google.com/citations?hl=zh-CN&user=tMO7jm4AAAAJ) &nbsp;&nbsp;&nbsp;&nbsp;[Bingke Wang]()
 
-VIM Lab, University of Science and Technology of China
+[VIM Lab, University of Science and Technology of China](http://vim.ustc.edu.cn/)
 
 </center>
 
+<video src="https://www.youtube.com/watch?v=8Q9SuW-7rS0&feature=youtu.be" width="800px" height="600px" controls="controls"></video>
 
+## Abstract
 
-You can use the [editor on GitHub](https://github.com/jfzhuang/DAVSS.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Video semantic segmentation targets to generate accurate semantic map for each frame in a video. For such a task, conducting  per-frame image segmentation is generally unacceptable in practice due to high computational cost. To address the issue, many works use the flow-based feature propagation to reuse the features of previous frames, which actually exploits the content continuity of consecutive frames. However, the optical flow estimation itself inevitably suffers inaccuracy and consequently would cause the propagated features distorted. In this paper, we propose a distortion-aware feature correction method with aims of improving video segmentation performance at a low price. The core idea is to mainly correct the features on distorted regions using the current frame, while the propagated features are reserved for other regions. As a result, a lightweight network can be enough to achieve promising segmentation results. In particular, we propose to predict the distorted regions in the image space by utilizing the consistency of distortion patterns for images and features, such that the high-cost feature extraction for the current frames can be avoided. We conduct the extensive experiments on Cityscapes and CamVid, and the results show that our proposed method significantly outperforms previous methods and achieves the state-of-the-art performance on both segmentation accuracy and speed.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Framework
 
-### Markdown
+![avatar](F:\git\DAVSS.github.io\image\framework.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Visualization
 
-```markdown
-Syntax highlighted code block
+### Cityscapes
 
-# Header 1
-## Header 2
-### Header 3
+![avatar](F:\git\DAVSS.github.io\image\cityscapes_56.png)
 
-- Bulleted
-- List
+![avatar](F:\git\DAVSS.github.io\image\cityscapes_85.png)
 
-1. Numbered
-2. List
+![avatar](F:\git\DAVSS.github.io\image\cityscapes_99.png)
 
-**Bold** and _Italic_ and `Code` text
+### CamVid
 
-[Link](url) and ![Image](src)
+![avatar](F:\git\DAVSS.github.io\image\cityscapes_56.png)
+
+![avatar](F:\git\DAVSS.github.io\image\cityscapes_85.png)
+
+![avatar](F:\git\DAVSS.github.io\image\cityscapes_99.png)
+
+## Materials
+
+## Citation
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jfzhuang/DAVSS.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+@article{zhuang2020video,
+  title={Video Semantic Segmentation with Distortion-Aware Feature Correction},
+  author={Zhuang, Jiafan and Wang, Zilei and Wang, Bingke},
+  journal={arXiv preprint arXiv:2006.10380},
+  year={2020}
+}
+```
