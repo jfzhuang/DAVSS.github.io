@@ -1,70 +1,182 @@
-<p>&lt;center&gt;</p>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<h1>Video Semantic Segmentation with &lt;br&gt; Distortion-Aware Feature Correction</h1>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Video Semantic Segmentation with Distortion-Aware Feature Correction</title>
 
-<p><a href="https://scholar.google.com/citations?user=KbWzCu4AAAAJ&amp;hl=zh-CN">Jiafan Zhuang</a> &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=tMO7jm4AAAAJ">Zilei Wang</a> &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<a href="">Bingke Wang</a></p>
+    <!-- Meta tags for search engines to crawl -->
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Video-Inpainting.&gt;
+&lt;meta name=" keywords"="">
 
-<p><a href="http://vim.ustc.edu.cn/">VIM Lab, University of Science and Technology of China</a></p>
+    <!-- Fonts and stuff -->
+    <link href="./resource/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./resource/project.css" media="screen">
+    <link rel="stylesheet" type="text/css" media="screen" href="./resource/iconize.css">
+    <script type="text/javascript" async="" src="./resource/ga.js.download"></script>
+    <script async="" src="./resource/prettify.js.download"></script>
 
-<p>&lt;/center&gt;</p>
+    <script type="text/javascript">
 
-<p>&lt;video src=&quot;https://www.youtube.com/watch?v=8Q9SuW-7rS0&amp;feature=youtu.be&quot; width=&quot;800px&quot; height=&quot;600px&quot; controls=&quot;controls&quot;&gt;&lt;/video&gt;</p>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-22940424-1']);
+        _gaq.push(['_trackPageview']);
 
-<p>&lt;center&gt;</p>
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
-<h2>Abstract</h2>
+    </script>
 
-<p>&lt;/center&gt;</p>
+</head>
 
-<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Video semantic segmentation targets to generate accurate semantic map for each frame in a video. For such a task, conducting  per-frame image segmentation is generally unacceptable in practice due to high computational cost. To address the issue, many works use the flow-based feature propagation to reuse the features of previous frames, which actually exploits the content continuity of consecutive frames. However, the optical flow estimation itself inevitably suffers inaccuracy and consequently would cause the propagated features distorted. In this paper, we propose a distortion-aware feature correction method with aims of improving video segmentation performance at a low price. The core idea is to mainly correct the features on distorted regions using the current frame, while the propagated features are reserved for other regions. As a result, a lightweight network can be enough to achieve promising segmentation results. In particular, we propose to predict the distorted regions in the image space by utilizing the consistency of distortion patterns for images and features, such that the high-cost feature extraction for the current frames can be avoided. We conduct the extensive experiments on Cityscapes and CamVid, and the results show that our proposed method significantly outperforms previous methods and achieves the state-of-the-art performance on both segmentation accuracy and speed.</p>
+<body>
+    <div id="content">
+        <div id="content-inner">
 
-<p>&lt;center&gt;</p>
+            <div class="section head">
+                <h1>Video Semantic Segmentation with <br> Distortion-Aware Feature Correction</h1>
 
-<h2>Framework</h2>
+                <div class="authors">
+                    <a href="https://scholar.google.com/citations?user=KbWzCu4AAAAJ&hl=zh-CN">Jiafan
+                        Zhuang<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=tMO7jm4AAAAJ">Zilei
+                        Wang<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://bzhou.ie.cuhk.edu.hk/">Bingke Wang<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
 
-<p>&lt;/center&gt;</p>
+                <div class="affiliations">
+                    <sup>1</sup> <a href="vim.ustc.edu.cn" target="_blank">VIM Lab, University of Science and Technology
+                        of China</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+                </div>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/framework.png&quot; width=&quot;860&quot;/&gt;</p>
+                <div class="venue"></div>
+            </div>
 
-<p>&lt;center&gt;</p>
 
-<h2>Visualization</h2>
+            <div class="section demo">
 
-<p>&lt;/center&gt;</p>
+                <br>
+                <center><iframe width="840" height="480"
+                        src="https://www.youtube.com/watch?v=8Q9SuW-7rS0&feature=youtu.be">
+                    </iframe></center>
+                <br>
+                <center>
+                    <a href="https://www.dropbox.com/s/2avcy30mleqi5vk/supplementary_cvpr_2019.mp4?dl=0"> Download
+                        Demo Video</a>
+                </center>
+            </div>
 
-<p>&lt;center&gt;</p>
+            <div class="section abstract">
+                <h2>Abstract</h2>
+                <br>
+                <p>
+                    Video semantic segmentation targets to generate accurate semantic map for each frame in a video. For
+                    such a task, conducting per-frame image segmentation is generally unacceptable in practice due to
+                    high computational cost. To address the issue, many works use the flow-based feature propagation to
+                    reuse the features of previous frames, which actually exploits the content continuity of consecutive
+                    frames. However, the optical flow estimation itself inevitably suffers inaccuracy and consequently
+                    would cause the propagated features distorted. In this paper, we propose a distortion-aware feature
+                    correction method with aims of improving video segmentation performance at a low price. The core
+                    idea is to mainly correct the features on distorted regions using the current frame, while the
+                    propagated features are reserved for other regions. As a result, a lightweight network can be enough
+                    to achieve promising segmentation results. In particular, we propose to predict the distorted
+                    regions in the image space by utilizing the consistency of distortion patterns for images and
+                    features, such that the high-cost feature extraction for the current frames can be avoided. We
+                    conduct the extensive experiments on Cityscapes and CamVid, and the results show that our proposed
+                    method significantly outperforms previous methods and achieves the state-of-the-art performance on
+                    both segmentation accuracy and speed.
 
-<h3>Cityscapes</h3>
+                </p>
+            </div>
 
-<p>&lt;/center&gt;</p>
+            <div class="section framework">
+                <h2>Framework</h2>
+                <br>
+                <center><img src="./image/framework.png" border="0" width="95%"></center>
+                <br>
+                <p>
+                    The framework of our proposed approach is illustrated, where semantic segmentation is performed on
+                    the features of each frame individually. To be specific, each of video frames is treated as the key
+                    or non-key frame. For the key frames, we directly conduct image semantic segmentation to get the
+                    results using a off-the-shelf network, and the intermediate features are used to propagate for the
+                    subsequent non-key frames. In particular, we propagate the features frame-by-frame. That is, the
+                    feature of current frame is first obtained by propagating that of the previous frame, in which the
+                    optical flow is predicted as the guidance and the bilinear interpolate is adopt as the warping
+                    operator. Meanwhile, we propagate the previous frame using the same optical flow and the resulting
+                    frame is named as distorted frame. For non-key frames, we first feed the distorted frame and the
+                    current frame into our proposed DMNet for distortion map prediction. After that, we pass the
+                    propagated feature, predicted distortion map and the current frame into our proposed FCM to rectify
+                    features on distorted regions. Finally, we conduct semantic segmentation on the corrected features
+                    to get the segmentation result.
+                </p>
+            </div>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png&quot; width=&quot;860&quot;/&gt;</p>
+            <div class="section visualization">
+                <h2>Experimental Results</h2>
+                We provide results on Cityscapes val subset and CamVid. DFF and Accel50 are reimplemented using
+                DeepLabv3+ and the same FlowNet as in our method.
+                <h3>Cityscapes</h3>
+                <br>
+                <center><img src="./image/cityscapes_metric.png" border="0" width="60%"></center>
+                <center><img src="./image/cityscapes_56.png" border="0" width="100%"></center>
+                <center><img src="./image/cityscapes_85.png" border="0" width="100%"></center>
+                <center><img src="./image/cityscapes_99.png" border="0" width="100%"></center>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png&quot; width=&quot;860&quot;/&gt;</p>
+                <h3>CamVid</h3>
+                <br>
+                <center><img src="./image/camvid_metric.png" border="0" width="60%"></center>
+                <center><img src="./image/cityscapes_56.png" border="0" width="100%"></center>
+                <center><img src="./image/cityscapes_85.png" border="0" width="100%"></center>
+                <center><img src="./image/cityscapes_99.png" border="0" width="100%"></center>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png&quot; width=&quot;860&quot;/&gt;</p>
+            </div>
 
-<p>&lt;center&gt;</p>
+            <div class="section materials">
+                <h2>Materials</h2>
+                <center>
+                    <ul>
 
-<h3>CamVid</h3>
+                        <li class="grid">
+                            <div class="griditem">
+                                <a href="https://arxiv.org/abs/2006.10380" target="_blank" class="imageLink"><img
+                                        src="./image/paper.png" border="0" width="50%"></a><br>
+                                <a href="https://arxiv.org/abs/2006.10380" target="_blank">Paper</a>
+                            </div>
+                        </li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>&lt;/center&gt;</p>
+                        <li class="grid">
+                            <div class="griditem">
+                                <a href="https://github.com/jfzhuang/DAVSS"><img src="./image/code.png"></a><br>
+                                <a href="https://github.com/jfzhuang/DAVSS">Codes</a>
+                            </div>
+                        </li>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png&quot; width=&quot;860&quot;/&gt;</p>
+                    </ul>
+                </center>
+            </div>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png&quot; width=&quot;860&quot;/&gt;</p>
+            <br>
 
-<p>&lt;img src=&quot;https://github.com/jfzhuang/DAVSS.github.io/blob/master/image/cityscapes_56.png&quot; width=&quot;860&quot;/&gt;</p>
-
-<h2>Materials</h2>
-
-<h2>Citation</h2>
-
-<p><code>
-@article{zhuang2020video,
+            <div class="section citation">
+                <h2>Citation</h2>
+                <div class="section bibtex">
+                    <pre>@article{zhuang2020video,
   title={Video Semantic Segmentation with Distortion-Aware Feature Correction},
   author={Zhuang, Jiafan and Wang, Zilei and Wang, Bingke},
   journal={arXiv preprint arXiv:2006.10380},
   year={2020}
-}
-</code></p>
+}</pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
