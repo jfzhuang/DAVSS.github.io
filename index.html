@@ -103,16 +103,18 @@
                     The framework of our proposed approach is illustrated, where semantic segmentation is performed on
                     the features of each frame individually. To be specific, each of video frames is treated as the key
                     or non-key frame. For the key frames, we directly conduct image semantic segmentation to get the
-                    results using a off-the-shelf network, and the intermediate features are used to propagate for the
-                    subsequent non-key frames. In particular, we propagate the features frame-by-frame. That is, the
-                    feature of current frame is first obtained by propagating that of the previous frame, in which the
-                    optical flow is predicted as the guidance and the bilinear interpolate is adopt as the warping
-                    operator. Meanwhile, we propagate the previous frame using the same optical flow and the resulting
-                    frame is named as distorted frame. For non-key frames, we first feed the distorted frame and the
-                    current frame into our proposed DMNet for distortion map prediction. After that, we pass the
-                    propagated feature, predicted distortion map and the current frame into our proposed FCM to rectify
-                    features on distorted regions. Finally, we conduct semantic segmentation on the corrected features
-                    to get the segmentation result.
+                    results using an off-the-shelf network, and the intermediate features are used to propagate to the
+                    subsequent non-key frames. In particular, we propagate the features frame-by-frame in this work.
+                    That is, the feature of current frame is first obtained by propagating that of the previous frame,
+                    in which the predicted optical flow is used as the guidance and the bilinear interpolate is adopt as
+                    the warping operator. At the same time, we propagate the image of video frame as for feature
+                    propagation with the same optical flow, resulting in the propagated frame. For the non-key frames,
+                    we first feed the propagated frame and current frame into our proposed distortion map network
+                    (DMNet) to predict a distortion map, which actually represents the distortion pattern of propagated
+                    feature. Then we use the current frame to rectify the propagated feature under the guidance of the
+                    predicted distortion map, which is completed in our proposed feature correction module (FCM).
+                    Finally, we conduct semantic segmentation on the corrected feature to get the segmentation result of
+                    current frame.
                 </p>
             </div>
 
